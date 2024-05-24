@@ -1,17 +1,22 @@
 #pragma once
-#include "Rectangle.h"
-
+#include <string>
+using namespace std;
 class Circle
 {
 public:
     Circle();
     ~Circle();
     Circle(int r);
+    Circle(const Circle* circle);
+    
     int getRadius();
     double getArea();
     void setRadius(int r);
+    void setName(string name);
+    string getName();
+
 private:
-    Rectangle* rect;
+    string name;
     int radius=0;
 protected:
     
